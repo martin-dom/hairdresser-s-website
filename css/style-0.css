@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #532b2b;
+}
+body{
+    background-image: url(../images/main-bg.jpg);
+
+}
+.container{
+    background-color: #DEDACF;
+    padding: 0;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+.main-h{
+    margin: 0.75em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a:link, a:visited{
+    color: #532b2b;
+}
+p{
+    font-size: 120%;
+}
+.shadow{
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.646);
+    display: none;
+}
+.hidden{
+    display: none;
+}
+
+/* Navigation */
+/* Normal navigation */
+.navn{
+    width: 100%;
+    height: 4em;
+    margin-top: 2em;
+    background-color: #B1AB99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-top-left-radius: 0.5em;
+    border-top-right-radius: 0.5em;
+}
+.nav-h{
+    padding: 1.5em;
+}
+.navn ul{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    top: 0.4em;
+}
+.navn ul li{
+    margin: 3em;
+    list-style-type: none;
+}
+.navn ul li a{
+    text-decoration: none;
+    color: #532b2b;
+    font-size: 150%;
+}
+.navn ul li a:hover{
+    border-bottom: 0.1em solid #532b2b5c;
+}
+
+/* Slide navigation */
+.fixed-top{
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 1020;
+}
+.navs{
+    z-index: 1030;
+}
+.navs-wrapper{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    height: 100vh;
+    width: 250px;
+    background-color: #DEDACF;
+    z-index: 1;
+    transition: 0.5s ease;
+    transform: translateX(-251px);
+}
+.navs-wrapper .links{
+    color: #532b2b;
+}
+.navs-wrapper .head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #DEDACF;
+}
+.navs-wrapper .head img{
+    width: 250px;
+    height: auto;
+    padding: 10px;
+}
+.nav1{
+    width: 100%;
+    list-style: none;
+}
+.nav1 li{
+    display: block;
+    width: 100%;
+}
+.nav1 li a{
+    background-color: #DEDACF;
+    padding: 15px 15px;
+    text-decoration: none;
+    display: block;
+    font-size: 20px;
+    letter-spacing: 1px;
+    overflow: hidden;
+    text-transform: capitalize;
+    text-align: center;
+}
+.nav1 li:hover a{
+    text-decoration: underline;
+}
+input{
+    -webkit-appearance: none;
+    visibility: hidden;
+    display: none;
+}
+span{
+    z-index: 1;
+    position: absolute;
+    right: 10%;
+    top: 30px;
+    font-size: 30px;
+    border-radius: 3px;
+    color: #DEDACF;
+    padding: 3px 8px;
+    cursor: pointer;
+    background: #B1AB99;
+    transition: 0.5s ease;
+}
+#bars{
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#times{
+    width: 1.5em;
+    height: 1.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#checkbox:checked ~ .navs-wrapper{
+    transform: translateX(0);
+}
+
+/* Main wiev */
+.main-wrapper {  
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    gap: 0px 0px;
+    grid-auto-flow: row;
+    grid-template-areas:
+        "foto4 foto4 title title title title"
+        "foto4 foto4 foto3 foto2 foto1 foto0";
+}
+
+.title { grid-area: title; }
+
+.foto0 { grid-area: foto0; }
+
+.foto1 { grid-area: foto1; }
+
+.foto2 { grid-area: foto2; }
+
+.foto3 { grid-area: foto3; }
+
+.foto4 { grid-area: foto4; }
+
+
+.foto0 img, .foto1 img, .foto2 img, .foto3 img{
+    width: 100%;
+    height: auto;
+}
+.foto4 img{
+    width: 100%;
+}
+.title img{
+    width: 100%;
+    height: auto;
+}
+
+/* About us */
+.about-us {
+    padding-top: 3em;
+}
+.about-us .grid{
+    display: grid;
+    grid-template-columns: 8fr 4fr;
+}
+.about-us .grid div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.about-us .grid div img{
+    width: 80%;
+}
+.about-us .grid main{
+    padding: 2em;
+}
+.about-us .gallery{
+    text-align: center;
+}
+.about-us .gallery img{
+    height: 13em;
+    width: auto;
+    margin: 1em;
+    transition: 1s;
+}
+.about-us .gallery img:hover{
+    filter: grayscale(75%);
+}
+
+/* Price list */
+.cenik div{
+    display: flex;
+    justify-content: center;
+}
+.cenik table{
+    width: 60%;
+    font-size: 150%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin: 2em;
+}
+.cenik table tr td{
+    border-bottom: 0.15em solid #532b2b;
+}
+.cenik table tr .price{
+    text-align: right;
+}
+
+/* Gallery */
+.gallery{
+    text-align: center;
+}
+.fotos .gallery img{
+    display: inline-block;
+    height: 13em;
+    margin: 1em;
+    transition: 1s;
+}
+.fotos .gallery img:hover{
+    filter: grayscale(75%);
+}
+
+/* Contact */
+.contact{
+    margin-top: 3em;
+    display: grid;
+    grid-template-columns: auto auto;
+}
+.contact .info{
+    margin: 2em;
+    text-align: center;
+}
+.contact .map iframe{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    padding: 2em;
+}
+
+/* Footer */
+footer p{
+    background-color: #532b2b;
+    color: #DEDACF;
+    text-align: center;
+    border-bottom-left-radius: 0.5em;
+    border-bottom-right-radius: 0.5em;
+}
+
+/* Small */
+@media only screen and (max-width: 992px) {
+    .navn{
+        display: none;
+    }
+    .navs{
+        display: block;
+    }
+    .container{
+        margin-top: 2em;
+    }
+    .foto4 img{
+        border-top-left-radius: 0.5em;
+    }
+    .title img{
+        border-top-right-radius: 0.5em;
+    }
+    .about-us .grid div{
+        display: none;
+    }
+    .about-us .grid{
+        grid-template-columns: auto;
+    }
+    .contact{
+        grid-template-columns: auto;
+    }
+}
+
+@media only screen and (max-width: 575px){
+    body{
+        background-image: none;
+    }
+    .container{
+        margin: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+    .main-wrapper{
+        display: block;
+    }
+    .foto0,.foto1,.foto2,.foto3,.foto4{
+        display: none;
+    }
+    .title img{
+        border-radius: 0;
+    }
+    .cenik table{
+        width: 75%;
+    }
+    footer p{
+        margin-bottom: 0;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+    }
+}
+
+@media only screen and (max-width: 486px){
+    .small-hide{
+        display: none;
+    }
+}
+
